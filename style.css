@@ -20,21 +20,6 @@ h1 {
   font-size: 50px;
 }
 
-/* div {
-  border-style: solid;
-  border: 10px solid black;
-  /* height: 150px;
-  width: 150px; */
-/* padding: 10px;
-  margin: 15px;
-  text-align: center;
-  font-size: 30px;
-  font-style: italic;
-  font-weight: bold;
-  display: grid;
-  grid-template-columns: auto;
-  grid-gap: 10px;
-} */
 .socialMedia {
   text-align: center;
   border-bottom: 2px solid black;
