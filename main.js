@@ -86,7 +86,7 @@ const geographyQuestion = [
       c: "Ottawa",
       d: "Montreal"
     },
-    correctAnswer: "b"
+    correctAnswer: b
   },
 
   {
@@ -101,3 +101,81 @@ const geographyQuestion = [
     correctAnswer: "a"
   }
 ];
+// adding random() to select random question from array 
+
+var randomQuestion =
+  geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
+
+console.log(randomQuestion);
+
+randomQuestion.question;
+
+//make div tag inside quizbox,
+//container for answers
+//four more div for answers
+//query the dom, insert the question in box
+//query the dom, insert the ansers in box
+//add quotes to html
+
+let newQuestion = document.getElementById("questionB");
+newQuestion.innerHTML = randomQuestion.question;
+
+// element.innerHTML = htmlString;
+
+// var randomAnswer =
+// geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
+// randomAnswer.answers;
+
+let newAnswera = document.getElementById("a");
+newAnswera.innerHTML = randomQuestion.answers.a;
+let newAnswerb = document.getElementById("b");
+newAnswerb.innerHTML = randomQuestion.answers.b;
+let newAnswerc = document.getElementById("c");
+newAnswerc.innerHTML = randomQuestion.answers.c;
+let newAnswerd = document.getElementById("d");
+newAnswerd.innerHTML = randomQuestion.answers.d;
+
+// add click event on each answers 
+
+const aButton = document.querySelector('.answerA')
+
+aButton.addEventListener('click', function () {
+  console.log("button a was clicked")
+})
+
+const bButton = document.querySelector('.answerB')
+
+bButton.addEventListener('click', function () {
+  console.log("button b was clicked")
+})
+
+const cButton = document.querySelector('.answerC')
+
+cButton.addEventListener('click', function () {
+  console.log("button c was clicked")
+})
+
+const dButton = document.querySelector('.answerD')
+
+dButton.addEventListener('click', function () {
+  console.log("button a was clicked")
+})
+
+// add a function that cpmpares correct answer and user click on event listener 
+function rightAnswer(){
+
+}
+
+//add event listener
+//to object if its right or wrong 
+// var a = document.getElementById("")
+// var x = document.getElementById("myBtn");
+// if (x.addEventListener) {
+//     x.addEventListener("click", myFunction);
+// } else if (x.attachEvent) {
+//     x.attachEvent("onclick", myFunction);
+// }
+
+// function myFunction() {
+//     alert("Hello World!");
+// }

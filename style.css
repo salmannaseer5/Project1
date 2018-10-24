@@ -1,16 +1,17 @@
 body {
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid black;
-  background-color: rgba(234, 234, 168, 0.1);
+  /* border: 1px solid black; */
+  background-color: rgba(207, 252, 246, 0.1);
 }
 header {
   border-bottom: 3px solid black;
-  background-color: rgb(29, 132, 235, 0.3);
-  /* background-image: url(images/art.jpg);
+  /* background-color: rgb(29, 132, 235, 0.3); */
+  background-image: url(images/art.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
-  background-position: center; */
+  background-position: center;
+  opacity: 0.2;
   color: rgb(0, 9, 9);
 }
 .gameName {
@@ -23,6 +24,7 @@ h1 {
 .socialMedia {
   text-align: center;
   border-bottom: 2px solid black;
+  margin: 60px auto;
 }
 a {
   text-decoration: none;
@@ -37,7 +39,7 @@ a {
 .time {
   display: block;
   border-style: solid;
-  border: 5px solid black;
+  border: 5px ridge;
   height: 150px;
   width: 150px;
   padding: 10px;
@@ -51,7 +53,7 @@ a {
 .score {
   display: block;
   border-style: solid;
-  border: 5px solid black;
+  border: 5px ridge;
   height: 150px;
   width: 150px;
   padding: 10px;
@@ -63,18 +65,22 @@ a {
 }
 
 .quizBox {
-  height: 500px;
-  width: 1030px;
+  height: 650px;
+  width: 1040px;
   padding: 75px;
   display: inline;
   border-style: solid;
-  border: 5px solid black;
+  border: 4px groove;
   padding: 10px;
   margin: 15px;
   text-align: center;
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
+}
+.start {
+  display: flex;
+  justify-content: center;
 }
 .startButton {
   background-color: #4caf50;
@@ -100,5 +106,90 @@ a {
 }
 
 .resetButton:hover {
-  background-color: red;
+  background-color: rgb(151, 100, 100);
+}
+
+.submitButton {
+  background-color: rgb(73, 133, 55);
+  border: 2px outset black;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: rgb(109, 93, 93);
+}
+
+.questionBox {
+  height: 200px;
+  width: 1000px;
+  /* padding: 75px; */
+  display: flex;
+  border-style: solid;
+  border: 2px outset;
+  padding: 10px;
+  margin: 1px auto;
+  text-align: start;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.answerA {
+  height: 70px;
+  width: 1000px;
+  /* padding: 75px; */
+  display: flex;
+  border-style: solid;
+  border: 1px outset;
+  padding: 10px;
+  margin: 5px auto;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.answerB {
+  height: 70px;
+  width: 1000px;
+  /* padding: 75px; */
+  display: flex;
+  border-style: solid;
+  border: 1px outset;
+  padding: 10px;
+  margin: 5px auto;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+.answerC {
+  height: 70px;
+  width: 1000px;
+  /* padding: 75px; */
+  display: flex;
+  border-style: solid;
+  border: 1px outset;
+  padding: 10px;
+  margin: 5px auto;
+  text-align: ;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.answerD {
+  height: 70px;
+  width: 1000px;
+  /* padding: 75px; */
+  display: flex;
+  border-style: solid;
+  border: 1px outset;
+  padding: 10px;
+  margin: 5px auto;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: bold;
 }
