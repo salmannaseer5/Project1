@@ -8,7 +8,7 @@ const geographyQuestion = [
       c: "Washington DC",
       d: "Boston"
     },
-    correctAnswer: "c"
+    correctAnswer:  "Washington DC"
   },
 
   {
@@ -19,7 +19,7 @@ const geographyQuestion = [
       c: "Autostrada",
       d: "AutoPista"
     },
-    correctAnswer: "a"
+    correctAnswer: "Autoroutes"
   },
 
   {
@@ -30,7 +30,7 @@ const geographyQuestion = [
       c: "Mariana Trench",
       d: "Krubera cave"
     },
-    correctAnswer: "c"
+    correctAnswer: "Mariana Trench"
   },
 
   {
@@ -41,7 +41,7 @@ const geographyQuestion = [
       c: "Cuba",
       d: "Antigua"
     },
-    correctAnswer: "a"
+    correctAnswer: "Dominica"
   },
 
   {
@@ -53,7 +53,7 @@ const geographyQuestion = [
       c: "Rocky Mountains",
       d: "Appalachians"
     },
-    correctAnswer: "c"
+    correctAnswer: "Rocky Mountains"
   },
 
   {
@@ -64,7 +64,7 @@ const geographyQuestion = [
       c: "Matterhorn",
       d: "Dufoursptize"
     },
-    correctAnswer: "d"
+    correctAnswer: "Dufoursptize"
   },
 
   {
@@ -75,7 +75,7 @@ const geographyQuestion = [
       c: "Africa",
       d: "South America"
     },
-    correctAnswer: "a"
+    correctAnswer: "Europe"
   },
 
   {
@@ -86,7 +86,7 @@ const geographyQuestion = [
       c: "Ottawa",
       d: "Montreal"
     },
-    correctAnswer: b
+    correctAnswer: "Toronto"
   },
 
   {
@@ -98,7 +98,7 @@ const geographyQuestion = [
       c: "Cairo",
       d: "Paris"
     },
-    correctAnswer: "a"
+    correctAnswer: "Moscow"
   }
 ];
 // adding random() to select random question from array 
@@ -136,46 +136,60 @@ let newAnswerd = document.getElementById("d");
 newAnswerd.innerHTML = randomQuestion.answers.d;
 
 // add click event on each answers 
+// turn green if answer is correct otherwise turn red
 
 const aButton = document.querySelector('.answerA')
 
 aButton.addEventListener('click', function () {
+  if (randomQuestion.correctAnswer === randomQuestion.answers.a) {
+   newAnswera.style.backgroundColor = "green";
+  } else {
+    newAnswera.style.backgroundColor = "red";
+  }
+
   console.log("button a was clicked")
 })
 
 const bButton = document.querySelector('.answerB')
 
 bButton.addEventListener('click', function () {
+  if (randomQuestion.correctAnswer === randomQuestion.answers.b) {
+   newAnswerb.style.backgroundColor = "green";
+  } else {
+    newAnswerb.style.backgroundColor = "red";
+  }
   console.log("button b was clicked")
 })
 
 const cButton = document.querySelector('.answerC')
 
 cButton.addEventListener('click', function () {
+  if (randomQuestion.correctAnswer === randomQuestion.answers.c) {
+   newAnswerc.style.backgroundColor = "green";
+  } else {
+    newAnswerc.style.backgroundColor = "red";
+  }
   console.log("button c was clicked")
 })
 
 const dButton = document.querySelector('.answerD')
 
 dButton.addEventListener('click', function () {
-  console.log("button a was clicked")
+  if (randomQuestion.correctAnswer === randomQuestion.answers.d) {
+   newAnswerd.style.backgroundColor = "green";
+  } else {
+    newAnswerd.style.backgroundColor = "red";
+  }
+   console.log("button d was clicked")
 })
+
+
+// var redBtn = document.querySelector(".red");
+// redBtn.addEventListener("click", function() {
+//   document.body.style.backgroundColor = "red";
+// });
 
 // add a function that cpmpares correct answer and user click on event listener 
 function rightAnswer(){
 
 }
-
-//add event listener
-//to object if its right or wrong 
-// var a = document.getElementById("")
-// var x = document.getElementById("myBtn");
-// if (x.addEventListener) {
-//     x.addEventListener("click", myFunction);
-// } else if (x.attachEvent) {
-//     x.attachEvent("onclick", myFunction);
-// }
-
-// function myFunction() {
-//     alert("Hello World!");
-// }
