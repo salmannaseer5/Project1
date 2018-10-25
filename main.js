@@ -99,8 +99,141 @@ const geographyQuestion = [
       d: "Paris"
     },
     correctAnswer: "Moscow"
-  }
+  },
+
+{
+    question: "The Great Victoria Desert is located in?",
+    answers: {
+      a: "Asia",
+      b: "South America",
+      c: "Australia",
+      d: "North America"
+    },
+    correctAnswer: "Australia"
+  },
+
+{
+    question: "Which city is not in Italy?",
+    answers: {
+      a: "Florence",
+      b: "Cannes",
+      c: "Turin",
+      d: "Genoa"
+    },
+    correctAnswer: "Cannes"
+  },
+
+  {
+    question: "Which Italian explorer arrived in the 'New world' while seeking passage to Asia via the Atlantic?",
+    answers: {
+      a: "Vasco da Gama",
+      b: "Marco Polo",
+      c: "James Cook",
+      d: "Christopher Columbus"
+    },
+    correctAnswer: "Christopher Columbus"
+  },
+
+  {
+    question: "Which place has the most volcanoes?",
+    answers: {
+      a: "Indonesia",
+      b: "Japan",
+      c: "Antarctica",
+      d: "Philippines"
+    },
+    correctAnswer: "Indonesia"
+  },
+
+{
+    question: "What country's national game is kabaddi, a group version of tag where players must evade the opposing team while holding a single breath of air?",
+    answers: {
+      a: "Afghanistan",
+      b: "Pakistan",
+      c: "India",
+      d: "Bangladesh"
+    },
+    correctAnswer: "Bangladesh"
+  },
+
+  {
+    question: "What Arizona river shares its name with a native venomous lizard?",
+    answers: {
+      a: "Gila River",
+      b: "Slitherine River",
+      c: "Komodo River",
+      d: "Iguana River"
+    },
+    correctAnswer: "Gila River"
+  },
+
+  {
+    question: "Which sea lies between Australia and New Zealand?",
+    answers: {
+      a: "Arafura Sea",
+      b: "Tasman Sea",
+      c: "Coral Sea",
+      d: "Timor Sea"
+    },
+    correctAnswer: "Coral Sea"
+  },
+
+  {
+    question: "In terms of area, which is the world’s largest landlocked country?",
+    answers: {
+      a: "Egypt",
+      b: "Paraguay",
+      c: "Zaire",
+      d: "Kazakhstan"
+    },
+    correctAnswer: "Kazakhstan"
+  },
+
+  {
+    question: "What kind of leaf appears on the Canadian flag?",
+    answers: {
+      a: "White",
+      b: "Sycamore",
+      c: "Maple",
+      d: "Oak"
+    },
+    correctAnswer: "Maple"
+  },
+
+  {
+    question: "What is the Capital of Jordan",
+    answers: {
+      a: "Ankara",
+      b: "Bairut",
+      c: "Baghdad",
+      d: "Amman"
+    },
+    correctAnswer: "Amman"
+  },
+  {
+    question: "If a strong Tropical Cyclone occurs in the northwest Pacific Ocean, what is it likely to be called?",
+    answers: {
+      a: "Tropical depression",
+      b: "Tornado",
+      c: "Typhoon",
+      d: "Hurricane"
+    },
+    correctAnswer: "Typhoon"
+  },
+
 ];
+
+
+//score function
+var scoreContainer = document.createElement('div');
+var score = 0
+
+scoreContainer.innerHTML = score;
+
+var newScoreBoard = document.getElementById('scoreBoard');
+newScoreBoard.appendChild(scoreContainer);
+
+
 // adding random() to select random question from array 
 
 var randomQuestion =
@@ -122,6 +255,61 @@ newQuestion.innerHTML = randomQuestion.question;
 
 // element.innerHTML = htmlString;
 
+
+// adding a event listener to go to the next question by click on submit button
+// 
+// const nextQuestion = document.getElementById('submit');
+// nextQuestion.addEventListener('click', showNextQuestion)
+// console.log("submit button was clicked " + nextQuestion)
+
+
+function newRandomQuestion () {
+  randomQuestion =
+  geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)]
+}
+
+function showNextQuestion() {
+  newRandomQuestion()
+  newAnswera.style.backgroundColor = "";
+  newAnswerb.style.backgroundColor = "";
+  newAnswerc.style.backgroundColor = "";
+  newAnswerd.style.backgroundColor = "";
+  newQuestion.innerText = randomQuestion.question
+  newAnswera.innerText = randomQuestion.answers.a
+  newAnswerb.innerText = randomQuestion.answers.b
+  newAnswerc.innerText = randomQuestion.answers.c
+  newAnswerd.innerText = randomQuestion.answers.d
+
+  // if (randomQuestion.correctAnswer === randomQuestion.answers.a) {
+  //     newScoreBoard += 1;
+  // } else {
+  //     score += 0;
+  // }
+
+
+  // if (randomQuestion.correctAnswer === randomQuestion.answers.b) {
+  //  newAnswera.style.backgroundColor = "green";
+  // } else {
+  //   newAnswera.style.backgroundColor = "red";
+  // }
+
+
+  // check if the correct answer, the button, (correctAnswer) has a color of green
+  // if the correct answer has the color of green, increment the score value
+  // then add the score to innerhtml of the score container
+
+  /*
+  scoreContainer.innerHTML = score;
+
+  var newScoreBoard = document.getElementById('scoreBoard');
+  newScoreBoard.innerHTML = scoreContainer.innerHTML 
+  */
+}
+
+function restart(){
+  location.reload();
+}
+
 // var randomAnswer =
 // geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
 // randomAnswer.answers;
@@ -135,8 +323,11 @@ newAnswerc.innerHTML = randomQuestion.answers.c;
 let newAnswerd = document.getElementById("d");
 newAnswerd.innerHTML = randomQuestion.answers.d;
 
+
 // add click event on each answers 
 // turn green if answer is correct otherwise turn red
+// const start = document.querySelector('.')
+
 
 const aButton = document.querySelector('.answerA')
 
@@ -184,12 +375,7 @@ dButton.addEventListener('click', function () {
 })
 
 
-// var redBtn = document.querySelector(".red");
-// redBtn.addEventListener("click", function() {
-//   document.body.style.backgroundColor = "red";
-// });
 
-// add a function that cpmpares correct answer and user click on event listener 
-function rightAnswer(){
-
-}
+// go to the next question
+// add score in score board
+//show summary at the end of quiz

@@ -12,8 +12,10 @@
 
 <body>
     <header>
+    <div id= "gameTitle">
         <h1 class="gameName">It's time to learn some</h1>
         <h1 class="gameName">Geography</h1>
+    </div>
     </header>
     <div class="container">
 
@@ -30,12 +32,12 @@
 
         </div>
 
-        <div id="submit"><button type="button" class="submitButton">Submit</button></div>
+        <div><button id="submit" type="button" class="submitButton" onclick="showNextQuestion()">Next</button></div>
 
 
         <div class="start">
-            <button type="button" class="startButton">Start</button>
-            <button type="button" class="resetButton">Reset</button>
+            <button type="button" class="startButton" onclick="start()">Start</button>
+            <button type="button" class="resetButton" onclick="restart()">Reset</button>
         </div>
     </div>
 
