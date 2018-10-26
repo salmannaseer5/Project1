@@ -8,6 +8,8 @@ Project1 - Travia Geography game
 
 🖥
 #Features:
+☛ Fun to Play.
+☛ Informative.
 ☛ User have multiple choice question.
 ☛ User can click on start to play.
 ☛ User have one question at a time on screen and four choices of answer.
