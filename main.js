@@ -8,7 +8,7 @@ const geographyQuestion = [
       c: "Washington DC",
       d: "Boston"
     },
-    correctAnswer:  "Washington DC"
+    correctAnswer: "Washington DC"
   },
 
   {
@@ -101,7 +101,7 @@ const geographyQuestion = [
     correctAnswer: "Moscow"
   },
 
-{
+  {
     question: "The Great Victoria Desert is located in?",
     answers: {
       a: "Asia",
@@ -112,7 +112,7 @@ const geographyQuestion = [
     correctAnswer: "Australia"
   },
 
-{
+  {
     question: "Which city is not in Italy?",
     answers: {
       a: "Florence",
@@ -124,7 +124,8 @@ const geographyQuestion = [
   },
 
   {
-    question: "Which Italian explorer arrived in the 'New world' while seeking passage to Asia via the Atlantic?",
+    question:
+      "Which Italian explorer arrived in the 'New world' while seeking passage to Asia via the Atlantic?",
     answers: {
       a: "Vasco da Gama",
       b: "Marco Polo",
@@ -145,8 +146,9 @@ const geographyQuestion = [
     correctAnswer: "Indonesia"
   },
 
-{
-    question: "What country's national game is kabaddi, a group version of tag where players must evade the opposing team while holding a single breath of air?",
+  {
+    question:
+      "What country's national game is kabaddi, a group version of tag where players must evade the opposing team while holding a single breath of air?",
     answers: {
       a: "Afghanistan",
       b: "Pakistan",
@@ -157,7 +159,8 @@ const geographyQuestion = [
   },
 
   {
-    question: "What Arizona river shares its name with a native venomous lizard?",
+    question:
+      "What Arizona river shares its name with a native venomous lizard?",
     answers: {
       a: "Gila River",
       b: "Slitherine River",
@@ -179,7 +182,8 @@ const geographyQuestion = [
   },
 
   {
-    question: "In terms of area, which is the world’s largest landlocked country?",
+    question:
+      "In terms of area, which is the world’s largest landlocked country?",
     answers: {
       a: "Egypt",
       b: "Paraguay",
@@ -211,7 +215,8 @@ const geographyQuestion = [
     correctAnswer: "Amman"
   },
   {
-    question: "If a strong Tropical Cyclone occurs in the northwest Pacific Ocean, what is it likely to be called?",
+    question:
+      "If a strong Tropical Cyclone occurs in the northwest Pacific Ocean, what is it likely to be called?",
     answers: {
       a: "Tropical depression",
       b: "Tornado",
@@ -219,22 +224,19 @@ const geographyQuestion = [
       d: "Hurricane"
     },
     correctAnswer: "Typhoon"
-  },
-
+  }
 ];
 
-
 //score function
-var scoreContainer = document.createElement('div');
-var score = 0
+var scoreContainer = document.createElement("div");
+var score = 0;
 
 scoreContainer.innerHTML = score;
 
-var newScoreBoard = document.getElementById('scoreBoard');
+var newScoreBoard = document.getElementById("scoreBoard");
 newScoreBoard.appendChild(scoreContainer);
 
-
-// adding random() to select random question from array 
+// adding random() to select random question from array
 
 var randomQuestion =
   geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
@@ -255,44 +257,41 @@ newQuestion.innerHTML = randomQuestion.question;
 
 // element.innerHTML = htmlString;
 
-
 // adding a event listener to go to the next question by click on submit button
-// 
+//
 // const nextQuestion = document.getElementById('submit');
 // nextQuestion.addEventListener('click', showNextQuestion)
 // console.log("submit button was clicked " + nextQuestion)
 
-
-function newRandomQuestion () {
+function newRandomQuestion() {
   randomQuestion =
-  geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)]
+    geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
 }
 
 function showNextQuestion() {
-  newRandomQuestion()
+  newRandomQuestion();
   newAnswera.style.backgroundColor = "";
   newAnswerb.style.backgroundColor = "";
   newAnswerc.style.backgroundColor = "";
   newAnswerd.style.backgroundColor = "";
-  newQuestion.innerText = randomQuestion.question
-  newAnswera.innerText = randomQuestion.answers.a
-  newAnswerb.innerText = randomQuestion.answers.b
-  newAnswerc.innerText = randomQuestion.answers.c
-  newAnswerd.innerText = randomQuestion.answers.d
+  newQuestion.innerText = randomQuestion.question;
+  newAnswera.innerText = randomQuestion.answers.a;
+  newAnswerb.innerText = randomQuestion.answers.b;
+  newAnswerc.innerText = randomQuestion.answers.c;
+  newAnswerd.innerText = randomQuestion.answers.d;
 
   // if (randomQuestion.correctAnswer === randomQuestion.answers.a) {
-  //     newScoreBoard += 1;
+  //   score += 1;
+  //   scoreContainer.innerText = newScoreBoard;
   // } else {
-  //     score += 0;
+  //   score += 0;
   // }
-
 
   // if (randomQuestion.correctAnswer === randomQuestion.answers.b) {
   //  newAnswera.style.backgroundColor = "green";
   // } else {
   //   newAnswera.style.backgroundColor = "red";
   // }
-
 
   // check if the correct answer, the button, (correctAnswer) has a color of green
   // if the correct answer has the color of green, increment the score value
@@ -306,7 +305,7 @@ function showNextQuestion() {
   */
 }
 
-function restart(){
+function restart() {
   location.reload();
 }
 
@@ -323,58 +322,54 @@ newAnswerc.innerHTML = randomQuestion.answers.c;
 let newAnswerd = document.getElementById("d");
 newAnswerd.innerHTML = randomQuestion.answers.d;
 
-
-// add click event on each answers 
+// add click event on each answers
 // turn green if answer is correct otherwise turn red
 // const start = document.querySelector('.')
 
+const aButton = document.querySelector(".answerA");
 
-const aButton = document.querySelector('.answerA')
-
-aButton.addEventListener('click', function () {
+aButton.addEventListener("click", function() {
   if (randomQuestion.correctAnswer === randomQuestion.answers.a) {
-   newAnswera.style.backgroundColor = "green";
+    newAnswera.style.backgroundColor = "green";
   } else {
     newAnswera.style.backgroundColor = "red";
   }
 
-  console.log("button a was clicked")
-})
+  console.log("button a was clicked");
+});
 
-const bButton = document.querySelector('.answerB')
+const bButton = document.querySelector(".answerB");
 
-bButton.addEventListener('click', function () {
+bButton.addEventListener("click", function() {
   if (randomQuestion.correctAnswer === randomQuestion.answers.b) {
-   newAnswerb.style.backgroundColor = "green";
+    newAnswerb.style.backgroundColor = "green";
   } else {
     newAnswerb.style.backgroundColor = "red";
   }
-  console.log("button b was clicked")
-})
+  console.log("button b was clicked");
+});
 
-const cButton = document.querySelector('.answerC')
+const cButton = document.querySelector(".answerC");
 
-cButton.addEventListener('click', function () {
+cButton.addEventListener("click", function() {
   if (randomQuestion.correctAnswer === randomQuestion.answers.c) {
-   newAnswerc.style.backgroundColor = "green";
+    newAnswerc.style.backgroundColor = "green";
   } else {
     newAnswerc.style.backgroundColor = "red";
   }
-  console.log("button c was clicked")
-})
+  console.log("button c was clicked");
+});
 
-const dButton = document.querySelector('.answerD')
+const dButton = document.querySelector(".answerD");
 
-dButton.addEventListener('click', function () {
+dButton.addEventListener("click", function() {
   if (randomQuestion.correctAnswer === randomQuestion.answers.d) {
-   newAnswerd.style.backgroundColor = "green";
+    newAnswerd.style.backgroundColor = "green";
   } else {
     newAnswerd.style.backgroundColor = "red";
   }
-   console.log("button d was clicked")
-})
-
-
+  console.log("button d was clicked");
+});
 
 // go to the next question
 // add score in score board
