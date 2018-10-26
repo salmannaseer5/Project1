@@ -1,19 +1,22 @@
 body {
   margin: 0 auto;
   padding: 20px;
-  background-color: #FCF9E1;
+  background-color: #7AC9D5;
 }
-header {
+.gameTitle {
   border-bottom: 3px solid black;
-  background-image: url(images/art.jpg);
-  background-repeat: repeat;
+  background-image: url(images/world.jpg);
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  opacity: 0.2;
+  opacity: 0.8;
   color: rgb(0, 9, 9);
+  background-size: cover;
 }
 .gameName {
   text-align: center;
+  color: black;
+  opacity: .9;
 }
 h1 {
   font-size: 50px;
@@ -37,7 +40,7 @@ a {
 .time {
   display: block;
   border-style: solid;
-  border: 5px ridge;
+  border: 5px ridge #62B1D2;
   height: 150px;
   width: 150px;
   padding: 10px;
@@ -46,12 +49,13 @@ a {
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
+  background-color: #40A0C9;
 }
 
 .score {
   display: block;
   border-style: solid;
-  border: 5px ridge;
+  border: 5px ridge #62B1D2;
   height: 150px;
   width: 150px;
   padding: 10px;
@@ -60,21 +64,23 @@ a {
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
+  background-color: #40A0C9;
 }
 
 .quizBox {
-  height: 650px;
-  width: 1040px;
+  height: 480px;
+  width: 610px;
   padding: 75px;
   display: inline;
   border-style: solid;
-  border: 4px groove;
+  border: 6px groove #EBEFD0;
   padding: 10px;
   margin: 15px;
   text-align: center;
   font-size: 30px;
   font-style: italic;
   font-weight: bold;
+  background-color: #748970;
 }
 .start {
   display: flex;
@@ -88,6 +94,7 @@ a {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+  margin: 2px 2px 2px 2px;
 }
 
 .startButton:hover {
@@ -101,6 +108,8 @@ a {
   text-align: center;
   font-size: 16px;
   cursor: pointer;
+  margin: 2px 2px 2px 2px;
+
 }
 
 .resetButton:hover {
@@ -122,12 +131,12 @@ a {
 }
 
 .questionBox {
-  height: 180px;
-  width: 1000px;
+  height: 120px;
+  width: 580px;
   /* padding: 75px; */
   display: flex;
   border-style: solid;
-  border: 2px outset;
+  border: 4px outset #E1E0BB;
   padding: 10px;
   margin: 1px auto;
   text-align: center;
@@ -137,63 +146,79 @@ a {
   margin-bottom: 5px;
 }
 .answerA {
-  height: 70px;
-  width: 1000px;
+  height: 50px;
+  width: 580px;
   /* padding: 75px; */
   display: flex;
   border-style: solid;
-  border: 1px outset;
+  border: 3px outset #E1E0BB;
   padding: 10px;
-  margin: 5px auto;
-  font-size: 32px;
+  margin: 10px auto;
+  font-size: 27px;
   font-style: italic;
   font-weight: bold;
+  background-color: #FFEAAD;
+  color: #212227;
+
+
 }
 
 .answerB {
-  height: 70px;
-  width: 1000px;
+  height: 50px;
+  width: 580px;
   /* padding: 75px; */
   display: flex;
   border-style: solid;
-  border: 1px outset;
+  border: 3px outset #C3C2C2;
   padding: 10px;
   margin: 5px auto;
-  font-size: 32px;
+  font-size: 27px;
   font-style: italic;
   font-weight: bold;
+  background-color: #FFEAAD;
+  color: #212227;
+ 
+
 }
 .answerC {
-  height: 70px;
-  width: 1000px;
+  height: 50px;
+  width: 580px;
   /* padding: 75px; */
   display: flex;
   border-style: solid;
-  border: 1px outset;
+  border: 3px outset #C3C2C2;
   padding: 10px;
   margin: 5px auto;
   text-align: ;
-  font-size: 32px;
+  font-size: 27px;
   font-style: italic;
   font-weight: bold;
+  background-color: #FFEAAD;
+  color: #212227;
+
+
 }
 
 .answerD {
-  height: 70px;
-  width: 1000px;
+  color: #212227;
+  height: 50px;
+  width: 580px;
   /* padding: 75px; */
   display: flex;
   border-style: solid;
-  border: 1px outset;
+  border: 3px outset #F7F6CD;
   padding: 10px;
   margin: 5px auto;
-  font-size: 32px;
+  font-size: 27px;
   font-style: italic;
   font-weight: bold;
+  background-color: #FFEAAD;
+
 }
 
 .questionBox{
-  font-size: 40px;
+  color: #212227;
+  font-size: 27px;
   font-weight: bold;
-  background-color: #E8FFE4;
+  background-color: #FFEAAD;
 }

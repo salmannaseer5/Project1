@@ -91,7 +91,7 @@ const geographyQuestion = [
 
   {
     question:
-      "I'm standing in Red Square admiring the St. Basil's Cathedral in Europe's most populated city. Where am I ?",
+      "I'm standing in the Red Square admiring the St. Basil's Cathedral in Europe's most populated city. Where am I ?",
     answers: {
       a: "Moscow",
       b: "Rome",
