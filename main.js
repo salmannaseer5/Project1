@@ -1,4 +1,6 @@
-console.log("Welcome to click on Play to start");
+// console.log("Welcome to click on Play to start");
+//I would change it to alert, since most people dont look at console
+alert("Welcome to click on Play to start");
 const geographyQuestion = [
   {
     question: "What is the capital of United States of America?",
@@ -228,21 +230,20 @@ const geographyQuestion = [
 ];
 
 //score function
-var scoreContainer = document.createElement("div");
-var score = 0;
+// var scoreContainer = document.createElement("div");
+// var score = 0;
+// scoreContainer.innerHTML = score;
+// var newScoreBoard = document.getElementById("scoreBoard");
+// newScoreBoard.appendChild(scoreContainer);
 
-scoreContainer.innerHTML = score;
-
-var newScoreBoard = document.getElementById("scoreBoard");
-newScoreBoard.appendChild(scoreContainer);
+document.getElementById("scoreBoard").innerHTML = score;
 
 // adding random() to select random question from array
 
 var randomQuestion =
   geographyQuestion[Math.floor(Math.random() * geographyQuestion.length)];
 
-console.log(randomQuestion);
-
+//console.log(randomQuestion);
 randomQuestion.question;
 
 //make div tag inside quizbox,
