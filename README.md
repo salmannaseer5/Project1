@@ -2,7 +2,7 @@
 
 Project1 - Travia Geography game
 
-![](https://github.com/salmannaseer5/Project1/blob/master/images/project1img.jpg)
+![Game Image](https://i.imgur.com/bL7vxgS.png)
 
 ---
 
@@ -11,7 +11,11 @@ Project1 - Travia Geography game
 ☛ Fun to Play.
 ☛ Informative.
 ☛ User have multiple choice question.
+![](https://i.imgur.com/BQjktRV.png)
 ☛ User can click on start to play.
+
+![](https://i.imgur.com/KS3qtG7.png)
+
 ☛ User have one question at a time on screen and four choices of answer.
 ☛ when user chooses answer if its correct it turns green if wrong it turns green.
 ☛ User can see score of right answers on Scoreboard.

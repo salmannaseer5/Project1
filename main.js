@@ -331,6 +331,8 @@ const aButton = document.querySelector(".answerA");
 aButton.addEventListener("click", function() {
   if (randomQuestion.correctAnswer === randomQuestion.answers.a) {
     newAnswera.style.backgroundColor = "green";
+    // add 50 pts to score
+    // addFiftyPoints();
   } else {
     newAnswera.style.backgroundColor = "red";
   }
@@ -370,7 +372,3 @@ dButton.addEventListener("click", function() {
   }
   console.log("button d was clicked");
 });
-
-// go to the next question
-// add score in score board
-//show summary at the end of quiz
